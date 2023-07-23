@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function TodoItem() {
-  return <div>TodoItem</div>;
+export default function TodoItem({ item }) {
+  return <li>{item.name}</li>;
 }
