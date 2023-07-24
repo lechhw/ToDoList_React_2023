@@ -1,0 +1,20 @@
+.todoItem {
+  display: flex;
+  width: 100%;
+}
+
+.checkBox {
+  margin-right: 10px;
+}
+
+.item {
+  flex-grow: 1;
+}
+
+.item.complete {
+  text-decoration: line-through;
+}
+
+.deleteBtn {
+  padding: 5px;
+}

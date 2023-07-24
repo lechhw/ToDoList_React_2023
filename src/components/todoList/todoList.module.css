@@ -1,0 +1,9 @@
+.list {
+  padding: 16px;
+  height: 450px;
+  overflow-y: auto;
+  /* border-bottom: 1px solid #999999; */
+  /* margin-bottom: 5px; */
+  /* width: 450px; */
+  background: #fdfdfd;
+}

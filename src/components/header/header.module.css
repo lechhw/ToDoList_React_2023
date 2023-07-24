@@ -1,0 +1,56 @@
+.header {
+  width: 100%;
+  /* background: gainsboro; */
+}
+.tabGroup {
+  width: 100%;
+  display: flex;
+}
+.tab {
+  width: calc(100% / 3);
+  height: 45px;
+  border-bottom: none;
+  /* border: 1px solid #666666; */
+  /* border-right: 1px solid #666666; */
+  /* background: gainsboro; */
+  padding-top: 10px;
+  padding-right: 2px;
+}
+.tab:last-child .label {
+  /* border-right: none; */
+  border-top-right-radius: 5px;
+}
+
+.tab.active {
+  color: red;
+
+  /* position: relative;
+  bottom: 10px; */
+}
+
+.label {
+  display: block;
+  position: relative;
+  padding: 15px 10px;
+  background: #f1f1f1;
+  color: #252525;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.label:last-child {
+}
+
+.label.active {
+  /* color: red; */
+  padding: 18px 10px;
+  margin-top: -6px;
+  border-radius: 5px 5px 0 0 !important;
+  /* background: rgb(128, 128, 128); */
+  background: #ffd83dcc;
+  /* color: #ffffff; */
+  /* color: #ffd93d; */
+}
