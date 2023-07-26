@@ -5,25 +5,25 @@
   background-color: #f1f1f1;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
 
-.input {
-  flex-grow: 1;
-  border: 1px solid transparent;
-  padding: 8px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+  .input {
+    flex-grow: 1;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 
-.input:focus {
-  outline: none !important;
-  border-color: #ffd83dcc;
-}
+  .input:focus {
+    outline: none !important;
+    border-color: #ffd83dcc;
+  }
 
-.button {
-  width: 40px;
-  font-size: 30px;
-  background: #ffd83dcc;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  .button {
+    width: 40px;
+    font-size: 30px;
+    background: #ffd83dcc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }

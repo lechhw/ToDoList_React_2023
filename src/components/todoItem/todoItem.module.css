@@ -1,14 +1,27 @@
 .todoItem {
   display: flex;
   width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: all 150ms ease-in-out;
+}
+
+.todoItem:hover {
+  background-color: #f1f1f1;
 }
 
 .checkBox {
-  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  width: 15px;
+  cursor: pointer;
 }
 
 .item {
   flex-grow: 1;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
 }
 
 .item.complete {
@@ -16,5 +29,8 @@
 }
 
 .deleteBtn {
-  padding: 5px;
+  padding: 10px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
 }

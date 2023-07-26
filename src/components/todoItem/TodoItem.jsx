@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './todoItem.module.css';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 export default function TodoItem({ item, onDeleteItem, onUpdateItem }) {
   const [complete, setComplete] = useState(item.complete);
@@ -18,11 +19,12 @@ export default function TodoItem({ item, onDeleteItem, onUpdateItem }) {
         checked={complete}
         onChange={(e) => handleChange(e)}
       />
-      <span className={`${styles.item} ${complete && styles.complete}`}>
+      <p className={`${styles.item} ${complete && styles.complete}`}>
         {item.name}
-      </span>
+      </p>
       <button className={styles.deleteBtn} onClick={() => onDeleteItem(item)}>
-        X
+        {/* X */}
+        <RiDeleteBin5Line />
       </button>
     </li>
   );

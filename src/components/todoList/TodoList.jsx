@@ -2,12 +2,7 @@ import React from 'react';
 import TodoItem from '../todoItem/TodoItem';
 import styles from './todoList.module.css';
 
-export default function TodoList({
-  // list,
-  filteredList,
-  onDeleteItem,
-  onUpdateItem,
-}) {
+export default function TodoList({ filteredList, onDeleteItem, onUpdateItem }) {
   return (
     <ul className={styles.list}>
       {filteredList.map((item) => (

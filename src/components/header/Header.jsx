@@ -4,44 +4,28 @@ import styles from './header.module.css';
 export default function Header({ filter, onFilter }) {
   return (
     <header className={styles.header}>
-      {/* <h1>Todo List</h1> */}
+      <h1>Todo List</h1>
       <div className={styles.tabGroup}>
         <button
           type="button"
-          className={styles.tab}
+          className={`${styles.tab} ${filter === 'all' && styles.active}`}
           onClick={() => onFilter('all')}
         >
-          <span
-            className={`${styles.label} ${filter === 'all' && styles.active}`}
-          >
-            전체
-          </span>
+          전체
         </button>
         <button
           type="button"
-          className={styles.tab}
+          className={`${styles.tab} ${filter === 'active' && styles.active}`}
           onClick={() => onFilter('active')}
         >
-          <span
-            className={`${styles.label} ${
-              filter === 'active' && styles.active
-            }`}
-          >
-            진행중
-          </span>
+          진행중
         </button>
         <button
           type="button"
-          className={styles.tab}
+          className={`${styles.tab} ${filter === 'complete' && styles.active}`}
           onClick={() => onFilter('complete')}
         >
-          <span
-            className={`${styles.label} ${
-              filter === 'complete' && styles.active
-            }`}
-          >
-            완료
-          </span>
+          완료
         </button>
       </div>
     </header>
