@@ -3,15 +3,18 @@ import './App.css';
 import Header from './components/header/Header';
 import InputForm from './components/inputForm/InputForm';
 import TodoList from './components/todoList/TodoList';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 function App() {
-  const [list, setList] = useState([
-    { id: '1', name: '아이템1', complete: false },
-    { id: '2', name: '아이템2', complete: false },
-    { id: '3', name: '아이템3', complete: true },
-  ]);
+  const [list, setList] = useState(
+    JSON.parse(localStorage.getItem('todoList'))
+  );
   const [filter, setFilter] = useState('all');
   const [filteredList, setFilteredList] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('todoList', JSON.stringify(list));
+  }, [list]);
 
   const onFilter = (tab) => {
     setFilter((prev) => (prev !== tab ? (prev = tab) : prev));
@@ -55,13 +58,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header filter={filter} onFilter={onFilter} />
-      <TodoList
-        filteredList={filteredList}
-        onDeleteItem={onDeleteItem}
-        onUpdateItem={onUpdateItem}
-      />
-      <InputForm onAddItem={onAddItem} />
+      <DarkModeProvider>
+        <Header filter={filter} onFilter={onFilter} />
+        <TodoList
+          filteredList={filteredList}
+          onDeleteItem={onDeleteItem}
+          onUpdateItem={onUpdateItem}
+        />
+        <InputForm onAddItem={onAddItem} />
+      </DarkModeProvider>
     </div>
   );
 }

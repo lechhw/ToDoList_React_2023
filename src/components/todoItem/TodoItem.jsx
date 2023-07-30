@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './todoItem.module.css';
 import { RiDeleteBin5Line } from 'react-icons/ri';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function TodoItem({ item, onDeleteItem, onUpdateItem }) {
   const [complete, setComplete] = useState(item.complete);
+  const { darkMode } = useContext(DarkModeContext);
 
   const handleChange = (e) => {
     setComplete(e.target.checked);
@@ -12,7 +14,7 @@ export default function TodoItem({ item, onDeleteItem, onUpdateItem }) {
   };
 
   return (
-    <li className={styles.todoItem}>
+    <li className={`${styles.todoItem} ${darkMode && styles.darkMode}`}>
       <input
         type="checkbox"
         className={styles.checkBox}

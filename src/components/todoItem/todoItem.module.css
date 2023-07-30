@@ -3,7 +3,18 @@
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  transition: all 150ms ease-in-out;
+}
+
+.todoItem.darkMode {
+  color: #ffffff;
+}
+
+.todoItem.darkMode:hover {
+  background-color: #3f3f3f;
+}
+
+.todoItem.darkMode .deleteBtn {
+  color: #ffffff;
 }
 
 .todoItem:hover {
@@ -12,7 +23,7 @@
 
 .checkBox {
   position: relative;
-  top: 2px;
+  top: 1px;
   width: 15px;
   cursor: pointer;
 }

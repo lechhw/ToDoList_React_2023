@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './input.module.css';
-// import { MdOutlineAddBox } from 'react-icons/md';
-// import { VscAdd } from 'react-icons/vsc';
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function InputForm({ onAddItem }) {
   const [item, setItem] = useState('');
+  const { darkMode } = useContext(DarkModeContext);
 
   const handleChange = (e) => {
     setItem(e.target.value);
   };
   return (
     <form
-      className={styles.form}
+      className={`${styles.form} ${darkMode && styles.darkMode}`}
       onSubmit={(e) => {
         e.preventDefault();
         onAddItem(item);
