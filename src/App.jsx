@@ -43,6 +43,7 @@ function App() {
   };
 
   useEffect(() => {
+    if (list.length < 1) return;
     const todoList = [...list];
     switch (filter) {
       case 'active':
