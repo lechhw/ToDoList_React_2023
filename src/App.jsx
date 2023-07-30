@@ -22,7 +22,9 @@ function App() {
 
   const onAddItem = (item) => {
     const uniqueId = new Date().getTime() + Math.random();
-    let updated = [...list, { name: item, id: uniqueId, complete: false }];
+    let updated = list
+      ? [...list, { name: item, id: uniqueId, complete: false }]
+      : [{ name: item, id: uniqueId, complete: false }];
     setList(updated);
   };
 
